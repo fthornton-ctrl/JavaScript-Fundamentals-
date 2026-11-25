@@ -1,33 +1,43 @@
-# JavaScript Interactive Webpage Project
+# JavaScript Milestone 3: DOM Interaction and Form Validation
 
 ## Project files
-- `index.html` contains the page structure and content.
-- `styles.css` contains the page styling and the live input style.
-- `script.js` contains all JavaScript interactions.
+- `index.html` contains the webpage and contact form.
+- `styles.css` contains the responsive design, error styles, and visible keyboard focus.
+- `script.js` contains the DOM interactions and client-side validation.
 
-## Assignment requirements addressed
-1. **Button changes page content:** The study-tip button uses `addEventListener("click")` to update visible text without refreshing the page.
-2. **Style changes on user input:** Typing in the name field adds or removes the `has-text` CSS class, changing the input appearance in real time.
-3. **Dynamic list:** New skills are created with `document.createElement()` and inserted with `appendChild()`.
-4. **List removal:** Each skill has a Remove button. Event delegation removes the selected list item.
-5. **Code quality:** JavaScript is in the separate `script.js` file. The project uses descriptive variable names and no inline `onclick` attributes.
+## Required assignment features
 
-## Test locally
-Keep all three files in the same folder. Open `index.html` in a browser and test:
-- Show a Study Tip
-- Type and clear a name
-- Add a skill
-- Remove a skill
+### 1. DOM interaction
+The "Show More Information" button uses `document.querySelector()` and `addEventListener("click")` to show and hide a content section without reloading the page. The button updates its label and `aria-expanded` state.
 
-Check the browser developer console for errors.
+### 2. Contact form validation
+The contact form requires a name, a valid email address, and a message. JavaScript prevents submission when a required field is empty or the email format is invalid. Error messages appear beside the fields in the DOM, not in alert boxes. Each field's error clears when the user corrects the value. The form reports successful validation without sending or storing personal information.
 
-## Publish with GitHub Pages
-1. Create or open your GitHub repository.
-2. Upload `index.html`, `styles.css`, `script.js`, and this README file to the repository root.
+### 3. Keyboard accessibility
+All interactive elements use native buttons and form controls. The page includes visible `:focus-visible` outlines, associated labels, `aria-describedby` error references, `aria-invalid` states, and live status messages. Use Tab to move between controls, Enter or Space to activate buttons, and type normally in fields.
+
+### Additional interactions retained
+- Study tip button updates visible text.
+- Name field changes its style as the user types.
+- Skills list adds items with `createElement()` and `appendChild()`.
+- Remove buttons delete individual skills.
+
+## Test checklist
+- Activate "Show More Information" with mouse, Enter, and Space. Confirm the section opens and closes.
+- Submit the contact form empty. Confirm three field errors appear and submission is blocked.
+- Enter a name, valid email, and message. Confirm each related error clears as the field is corrected.
+- Enter an invalid email. Confirm the email error remains until corrected.
+- Submit all valid fields. Confirm the success message appears and no page reload occurs.
+- Test the study tip, name styling, add skill, and remove skill controls.
+- Check the browser console for JavaScript errors.
+
+## GitHub submission
+1. Extract this ZIP file.
+2. Upload `index.html`, `styles.css`, `script.js`, and `README.md` to the root of your GitHub repository.
 3. Commit the changes.
-4. Open **Settings > Pages**.
-5. Under **Build and deployment**, select **Deploy from a branch**.
-6. Select the `main` branch and the `/(root)` folder, then save.
-7. Wait for GitHub Pages to publish the site. Open the Pages URL shown in repository settings.
+4. In the repository, open Settings > Pages.
+5. Select Deploy from a branch, choose `main` and `/(root)`, then save.
+6. Wait for GitHub Pages to publish. Open the URL shown in the Pages settings and test the live page.
+7. Submit your updated GitHub Pages URL as required by your instructor.
 
-Submit your public GitHub repository URL or published GitHub Pages URL, according to your instructor's directions.
+The form is a front-end demonstration. A server or form service is required to deliver messages to an inbox.

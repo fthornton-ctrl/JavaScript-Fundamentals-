@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My IT Learning Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">JavaScript Milestone 3 Project</p>
+      <h1>My IT Learning Hub</h1>
+      <p>Explore learning goals, personalize the page, and connect about IT topics.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="welcome-heading">
+      <h2 id="welcome-heading">Welcome</h2>
+      <p id="welcome-message">Select the button to receive a study tip.</p>
+      <button id="tip-button" type="button">Show a Study Tip</button>
+    </section>
+
+    <section class="panel" aria-labelledby="details-heading">
+      <h2 id="details-heading">Why Practice IT Skills?</h2>
+      <p>Regular practice helps build confidence with technical tools and problem-solving.</p>
+      <button id="details-button" type="button" aria-expanded="false" aria-controls="extra-details">
+        Show More Information
+      </button>
+      <div id="extra-details" class="extra-details" hidden>
+        <p>Start with a small goal, test your work, review errors, and record what you learned. Repeating this process helps strengthen technical skills over time.</p>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="personalize-heading">
+      <h2 id="personalize-heading">Personalize Your Page</h2>
+      <label for="name-input">Enter your name:</label>
+      <input id="name-input" type="text" placeholder="Type your name">
+      <p id="name-feedback" class="feedback" aria-live="polite">Your page will respond as you type.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Form</h2>
+      <p>Send a message about an IT topic you want to learn.</p>
+      <form id="contact-form" novalidate>
+        <div class="form-field">
+          <label for="contact-name">Name <span aria-hidden="true">*</span></label>
+          <input id="contact-name" name="name" type="text" autocomplete="name" required aria-describedby="contact-name-error">
+          <p id="contact-name-error" class="field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-field">
+          <label for="contact-email">Email <span aria-hidden="true">*</span></label>
+          <input id="contact-email" name="email" type="email" autocomplete="email" required aria-describedby="contact-email-error">
+          <p id="contact-email-error" class="field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-field">
+          <label for="contact-message">Message <span aria-hidden="true">*</span></label>
+          <textarea id="contact-message" name="message" rows="4" required aria-describedby="contact-message-error"></textarea>
+          <p id="contact-message-error" class="field-error" aria-live="polite"></p>
+        </div>
+
+        <button type="submit">Submit Message</button>
+        <p id="form-status" class="feedback" role="status" aria-live="polite"></p>
+      </form>
+      <p class="form-note">This demonstration validates your entries in the browser. It does not send or store personal information.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">My Technical Skills List</h2>
+      <p>Add skills you want to practice. Select Remove beside a skill to delete it.</p>
+      <form id="skill-form">
+        <label for="skill-input">New skill:</label>
+        <div class="input-row">
+          <input id="skill-input" type="text" placeholder="Example: JavaScript" autocomplete="off">
+          <button type="submit">Add Skill</button>
+        </div>
+      </form>
+      <ul id="skills-list">
+        <li><span>HTML</span><button class="remove-button" type="button" aria-label="Remove HTML">Remove</button></li>
+        <li><span>CSS</span><button class="remove-button" type="button" aria-label="Remove CSS">Remove</button></li>
+        <li><span>JavaScript</span><button class="remove-button" type="button" aria-label="Remove JavaScript">Remove</button></li>
+      </ul>
+      <p id="list-status" class="feedback" aria-live="polite"></p>
+    </section>
+
+    <footer>
+      <p>Created for a JavaScript DOM interaction and form validation assignment.</p>
+    </footer>
+  </main>
+</body>
+</html>
