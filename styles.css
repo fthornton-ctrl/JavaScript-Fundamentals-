@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background: #eef3f8;
+}
+
+.container {
+  width: min(850px, 100%);
+  margin: 0 auto;
+}
+
+header {
+  padding: 1.5rem 0;
+}
+
+.eyebrow {
+  color: #087e8b;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+h1, h2 {
+  line-height: 1.2;
+}
+
+h1 {
+  color: #16324f;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+
+.panel {
+  background: #ffffff;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(22, 50, 79, 0.08);
+}
+
+.panel h2 {
+  color: #16324f;
+  margin-top: 0;
+}
+
+button {
+  border: 0;
+  border-radius: 7px;
+  padding: 0.7rem 1rem;
+  background: #087e8b;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #075e68;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #f4a261;
+  outline-offset: 3px;
+}
+
+input {
+  width: 100%;
+  max-width: 440px;
+  padding: 0.7rem;
+  border: 1px solid #9aa9b8;
+  border-radius: 7px;
+  font: inherit;
+}
+
+input.has-text {
+  border: 2px solid #087e8b;
+  background: #e5f7f5;
+  box-shadow: 0 0 0 3px rgba(8, 126, 139, 0.12);
+}
+
+.feedback {
+  min-height: 1.5rem;
+  color: #36566f;
+}
+
+.input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.4rem;
+}
+
+#skills-list {
+  padding-left: 1.4rem;
+}
+
+#skills-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #e1e8ef;
+}
+
+.remove-button {
+  background: #8b3545;
+  padding: 0.45rem 0.7rem;
+  font-size: 0.9rem;
+}
+
+.remove-button:hover {
+  background: #672534;
+}
+
+footer {
+  padding: 1rem 0;
+  color: #526579;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 1rem 0.75rem;
+  }
+
+  .panel {
+    padding: 1rem;
+  }
+
+  .input-row input {
+    max-width: none;
+  }
+
+  #skills-list li {
+    align-items: flex-start;
+  }
+}
